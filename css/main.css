@@ -1,0 +1,494 @@
+/*
+ File: main.css
+ Authors: Maria Luce Bottazzo, Primiano Arminio Cristino, Angelo Di Iorio, Giulia Donati, Fabio Vitali
+ Last change on: 17/06/2020
+
+ Copyright (c) 2020 by the authors, DH.ARC + Department of Computer Science, University of Bologna
+
+ Permission to use, copy, modify, and/or distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+ OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
+
+html, body {
+	height: 100% ;
+	max-height: 100% ;
+}
+/*
+body {
+      padding-top: 50px;
+      padding-bottom: 20px;
+}*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+
+#docs::-webkit-scrollbar, #docs1::-webkit-scrollbar {
+width: 5px;
+background: transparent;
+}
+
+.blck{
+  color: #3e3f3a;
+}
+.blck:hover{
+  color: #3e3f3a;
+  background:#f8f5f0;
+}
+@media only screen and (max-width: 767px) {
+  .blck {
+    background: #3e3f3a;
+    color: #98978b;
+  }
+  .blck:hover{
+  color: #ffffff;
+  background: #3e3f3a;
+  }
+}
+
+#docs, #docs1{
+   max-height: 60vh;
+   overflow-y: scroll;
+}
+#list,#list1 ,.collapse-large{
+  min-width:250px;
+  max-width:250px;
+  display: inline-block;
+}
+.unclickable {
+  text-decoration: none;
+  pointer-events: none;
+}
+.unclickable:hover {
+  cursor: default;
+}
+
+.modal-dialog-centered .modal {
+  text-align: center;
+  padding: 0!important;
+}
+mark {
+  background: yellow;
+}
+
+mark.current {
+  background: orange;
+}
+.hideme {
+    display: none;
+}
+.caret-right {
+    border-left: 4px solid;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+}
+.myimg, .myimg2{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:2%;
+  flex-grow:1;
+  width:auto;
+  max-width:0%;
+  height:auto;
+}
+.highlight {
+    background-color: #fff34d;
+    -moz-border-radius: 5px; /* FF1+ */
+    -webkit-border-radius: 5px; /* Saf3-4 */
+    border-radius: 5px; /* Opera 10.5, IE 9, Saf5, Chrome */
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* FF3.5+ */
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Saf3.0+, Chrome */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Opera 10.5+, IE 9.0 */
+}
+.highlightfocus {
+    background-color: #ff9000;
+    -moz-border-radius: 5px; /* FF1+ */
+    -webkit-border-radius: 5px; /* Saf3-4 */
+    border-radius: 5px; /* Opera 10.5, IE 9, Saf5, Chrome */
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* FF3.5+ */
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Saf3.0+, Chrome */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Opera 10.5+, IE 9.0 */
+}
+
+.highlight {
+    padding:1px 4px;
+    margin:0 -4px;
+}
+.modal-dialog-centered .modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -2%;
+
+}
+
+.modal-dialog-centered .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+/*
+@media (min-width: 768px) {//Huger modal
+  .modal .modal-xl {
+    width: 48%;
+   max-width:1200px;
+}
+*/
+.modal-dialog-centered .modal-backdrop{
+  opacity:0.7 !important;
+}
+
+/*
+.modal-dialog-centered .modal-dialog {
+  margin-top: 4%;
+  height: 82%; // = 90% of the .modal-backdrop block = %90 of the screen
+}
+.modal-dialog-centered .modal-content {
+  height: 100%; // = 100% of the .modal-dialog block
+}
+*/
+/*
+@media (min-width: 768px) {
+  .content {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: calc(50% - 25px);
+    top: -moz-calc(50% - 25px);
+    top: -webkit-calc(50% - 25px);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+  }
+}
+*/
+/*
+.massive-font{
+font-size: 30px;
+}
+.progress{
+ height:30px;
+}
+
+.progress {
+
+ border: 1px solid black;
+
+ padding: 4px;
+}*/
+.progress-bar {
+  float: left;
+  width: 0;
+  height: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  color: #fff;
+  text-align: center;
+  background-color: #337ab7;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+          box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
+  -webkit-transition: width .6s ease;
+       -o-transition: width .6s ease;
+          transition: width .6s ease;
+}
+/*bootstrap 2*/
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+    margin-left:-1px;
+    -webkit-border-radius:0 6px 6px 6px;
+    -moz-border-radius:0 6px 6px 6px;
+    border-radius:0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+    display:block;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color:#ffffff;
+}
+.dropdown-submenu.pull-left {
+    float:none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left:-100%;
+    margin-left:10px;
+    -webkit-border-radius:6px 0 6px 6px;
+    -moz-border-radius:6px 0 6px 6px;
+    border-radius:6px 0 6px 6px;
+}
+/*fine bootstrap 2*/
+#coownerForm > *{
+	margin:3px;
+}
+
+#errorShare{
+	display:none;
+	color:red;
+}
+
+#errorSignUp{
+	display:none;
+	color:red;
+}
+#errorLogin{
+	display:none;
+	color:red;
+}
+#errorPwd{
+	display:none;
+	color:red;
+}
+#errorPwd{
+
+}
+#notifica{
+	display:none;
+	position:fixed;
+	z-index:3;
+	top:10%;
+}
+#errore{
+	display:none;
+	position:fixed;
+	z-index:3;
+	top:1%;
+}
+#login .btn-info{
+	float:left;
+}
+
+
+#notifica{
+	display:none;
+	position:fixed;
+	z-index:3;
+	top:1%;
+}
+#login .btn-info{
+	float:left;
+}
+
+/*fine*/
+
+.right {
+	max-height: 90% ;
+	margin-top: 60px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+.left {
+	max-height: 90% ;
+	margin-top: 60px;
+	overflow: scroll;
+	overflow-x: hidden;
+}
+
+#file p {
+	line-height: 200%;
+	font-size: 120%;
+	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  height: 40px;
+  background-color: #f5f5f5;
+}
+
+.canSave {
+	color: #66FF33;
+}
+.cannotSave {
+	color: #FF0000;
+}
+.noDoc {
+	color: auto;
+}
+.editing {
+/*	display: inline-table !important; */
+	min-width: 150px;
+}
+
+.btn-white {
+	background-color: #ffffff;
+	border: 1pt solid #A0A0A0;
+	line-height: 20px;
+}
+.vert .replace {
+	display: inline-table;
+	vertical-align: text-bottom;
+	margin-top: -2em;
+}
+.vert .replace .newVersion {
+	vertical-align: bottom;
+	text-align: center;
+	line-height: 140%;
+}
+
+.vert .replace .newVersion * {
+	display: inline;
+	vertical-align: inherit;
+	line-height: inherit;
+}
+
+.vert .replace .oldVersion {
+	display: table-row;
+	text-align: center;
+	line-height: 140%;
+}
+
+.oriz .replace, .oriz .insert, .oriz .delete {
+	border-bottom: 1px dotted #A00000;
+/*	display: inline-table; */
+}
+.oriz .newVersion {
+	background-color: #F0F0F0;
+/*	display: table-cell; */
+}
+
+.oriz .newVersion {
+	font-style: italic;
+/*	display: table-cell; */
+}
+.oriz .newVersion::before {
+	content: "[" ;
+	color: #B0B0B0;
+}
+
+.oriz .newVersion::after {
+	content: "]>" ;
+	color: #B0B0B0;
+}
+
+/*.vert .replace .newVersion{
+	content:"p>";
+	color: #000000;
+}*/
+
+.vert .reduce {
+	font-size: 80%;
+	position: relative;
+	top: 0.4em;
+}
+
+.insert.visibile span, .insert.visibile span {
+	font-size: 100% !important;
+	font-weight: bold;
+	color: blue;
+}
+
+.delete.visibile  span, .delete.visibile  span {
+	font-weight: bold;
+	color: blue;
+	text-decoration: line-through;
+}
+
+.insert, .delete {
+	display:inline;
+}
+
+.insert .newVersion {
+	display:inline;
+}
+
+.delete .oldVersion {
+	display: inline;
+}
+
+.spaceOver {
+	margin-top: 10px;
+}
+
+#push {
+	height: 40px;
+}
+
+.button button {
+	padding-top: 1px;
+	padding-bottom: 2px;
+}
+.button {
+	padding-bottom: 1px;
+}
+
+.addCategoria, .addMetodologia {
+	width: 80%;
+}
+
+.btn {
+	padding: 12px 12px;
+}
+
+.hide {
+	display: none !important;
+}
+
+.leaf>a {
+	font-size: 11px;
+	padding: 2px 15px !important;
+	text-transform: none;
+	font-weight: normal ;
+}
+
+.nav {
+	line-height: initial !important;
+}
+.tree-toggle {
+	cursor: pointer;
+}
+
+label {
+	margin: 2px;
+}
+
+.tree {
+	padding: 0px 10px;
+}
+
+#splitExample {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.small {
+	height: 80%;
+	width: 80%;
+}
