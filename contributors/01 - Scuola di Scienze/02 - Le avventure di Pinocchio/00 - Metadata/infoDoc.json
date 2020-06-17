@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1",
+        "authors": [
+            "Primiano"
+        ],
+        "versions": [
+            "VOLUME",
+            "RIVISTA"
+        ],
+        "tei": {
+            "encodingDesc": "precisazioni scolastiche",
+            "revisionDesc": [
+                {
+                    "when": "2019-11-06",
+                    "who": "#Primiano"
+                }
+            ],
+            "publicationStmt": {
+                "publisher": "Primi",
+                "pubPlace": "Bologna",
+                "date": "2019",
+                "license": "nessuna"
+            },
+            "editionStmts": [
+                {
+                    "resp": "Capitolo 1",
+                    "name": "Primiano Cristino",
+                    "id": "Primiano"
+                }
+            ]
+        }
+    },
+    {
+        "id": "2",
+        "authors": [
+            "Primiano"
+        ],
+        "versions": [
+            "VOLUME",
+            "RIVISTA"
+        ],
+        "tei": {
+            "encodingDesc": "formiche",
+            "revisionDesc": [
+                {
+                    "when": "2019-11-07",
+                    "who": "#Primiano"
+                }
+            ],
+            "publicationStmt": {
+                "publisher": "Pri",
+                "pubPlace": "Bologna",
+                "date": "2019",
+                "license": "no"
+            },
+            "editionStmts": [
+                {
+                    "resp": "cap 2",
+                    "name": "Primiano Cristino",
+                    "id": "Primiano"
+                }
+            ]
+        }
+    }
+]

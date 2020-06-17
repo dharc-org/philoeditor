@@ -1,0 +1,58 @@
+{
+    "02 - Le avventure di Pinocchio": {
+        "01 - Capitolo 1": {
+            "1": {
+                "chars": {
+                    "Fiorentinismi d'uso": 0,
+                    "Innalzamento espressivo": 0,
+                    "Precisazioni scolastiche": 6,
+                    "Ridondanza semantica": 0,
+                    "Ripetizioni": 0,
+                    "Toscanismi": 0,
+                    "Varianti grafiche": 0,
+                    "Varianti interpuntive": 0
+                },
+                "items": {
+                    "Fiorentinismi d'uso": 0,
+                    "Innalzamento espressivo": 0,
+                    "Precisazioni scolastiche": 1,
+                    "Ridondanza semantica": 0,
+                    "Ripetizioni": 0,
+                    "Toscanismi": 0,
+                    "Varianti grafiche": 0,
+                    "Varianti interpuntive": 0
+                },
+                "total": 3659,
+                "unmodified": 3653,
+                "totalItems": 1
+            }
+        },
+        "02 - Capitolo 2": {
+            "2": {
+                "chars": {
+                    "Fiorentinismi d'uso": 0,
+                    "Innalzamento espressivo": 8,
+                    "Precisazioni scolastiche": 0,
+                    "Ridondanza semantica": 0,
+                    "Ripetizioni": 0,
+                    "Toscanismi": 0,
+                    "Varianti grafiche": 0,
+                    "Varianti interpuntive": 0
+                },
+                "items": {
+                    "Fiorentinismi d'uso": 0,
+                    "Innalzamento espressivo": 1,
+                    "Precisazioni scolastiche": 0,
+                    "Ridondanza semantica": 0,
+                    "Ripetizioni": 0,
+                    "Toscanismi": 0,
+                    "Varianti grafiche": 0,
+                    "Varianti interpuntive": 0
+                },
+                "total": 3555,
+                "unmodified": 3547,
+                "totalItems": 1
+            }
+        }
+    }
+}

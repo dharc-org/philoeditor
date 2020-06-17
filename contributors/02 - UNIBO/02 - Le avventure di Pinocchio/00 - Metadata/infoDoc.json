@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1",
+        "authors": [
+            "Gulli"
+        ],
+        "versions": [
+            "RIVISTA",
+            "VOLUME"
+        ],
+        "tei": {
+            "encodingDesc": "mod",
+            "revisionDesc": [
+                {
+                    "when": "2020-04-04",
+                    "who": "#Gulli"
+                }
+            ],
+            "publicationStmt": {
+                "publisher": "G",
+                "pubPlace": "qui",
+                "date": "2020",
+                "license": "no"
+            },
+            "editionStmts": [
+                {
+                    "resp": "zero",
+                    "name": "Guglielmo G",
+                    "id": "Gulli"
+                }
+            ]
+        }
+    },
+    {
+        "id": "2",
+        "authors": [
+            "Gulli"
+        ],
+        "versions": [
+            "RIVISTA",
+            "VOLUME"
+        ],
+        "tei": {
+            "encodingDesc": "Fior. d'uso",
+            "revisionDesc": [
+                {
+                    "when": "2020-04-04",
+                    "who": "#Gulli"
+                }
+            ],
+            "publicationStmt": {
+                "publisher": "Mio",
+                "pubPlace": "Qui",
+                "date": "2020",
+                "license": "Ti piacerebbe"
+            },
+            "editionStmts": [
+                {
+                    "resp": "Nessuna",
+                    "name": "Guglielmo G",
+                    "id": "Gulli"
+                }
+            ]
+        }
+    }
+]

@@ -1,0 +1,29 @@
+{
+    "01 - I promessi sposi": {
+        "01- Tomo 1 sample": {
+            "1": {
+                "chars": {
+                    "Abbassamento linguistico": 67,
+                    "Fiorentinismi d'uso": 23,
+                    "Innalzamento linguistico": 0,
+                    "Locuzioni idiomatiche": 0,
+                    "Toscanismi letterari": 0,
+                    "Varianti grafiche": 9,
+                    "Varianti interpuntive": 0
+                },
+                "items": {
+                    "Abbassamento linguistico": 4,
+                    "Fiorentinismi d'uso": 3,
+                    "Innalzamento linguistico": 0,
+                    "Locuzioni idiomatiche": 0,
+                    "Toscanismi letterari": 0,
+                    "Varianti grafiche": 1,
+                    "Varianti interpuntive": 0
+                },
+                "total": 45433,
+                "unmodified": 45334,
+                "totalItems": 8
+            }
+        }
+    }
+}

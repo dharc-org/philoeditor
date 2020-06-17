@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "authors": [
+            "Primiano"
+        ],
+        "versions": [
+            "1827",
+            "1840"
+        ],
+        "tei": {
+            "encodingDesc": "abb",
+            "revisionDesc": [
+                {
+                    "when": "2019-11-12",
+                    "who": "#Primiano"
+                }
+            ],
+            "publicationStmt": {
+                "publisher": "Primiano",
+                "pubPlace": "bologna",
+                "date": "2019",
+                "license": "nessuna"
+            },
+            "editionStmts": [
+                {
+                    "resp": "cap 1",
+                    "name": "Primiano Cristino",
+                    "id": "Primiano"
+                }
+            ]
+        }
+    }
+]

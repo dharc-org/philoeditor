@@ -1,0 +1,34 @@
+[
+    {
+        "id": "1",
+        "authors": [
+            "martinagiulia"
+        ],
+        "versions": [
+            "VOLUME",
+            "RIVISTA"
+        ],
+        "tei": {
+            "encodingDesc": "prova",
+            "revisionDesc": [
+                {
+                    "when": "2020-04-04",
+                    "who": "#martinagiulia"
+                }
+            ],
+            "publicationStmt": {
+                "publisher": "Martina",
+                "pubPlace": "prova",
+                "date": "2020",
+                "license": "prova"
+            },
+            "editionStmts": [
+                {
+                    "resp": "prova",
+                    "name": "Martina Dello Buono",
+                    "id": "martinagiulia"
+                }
+            ]
+        }
+    }
+]
