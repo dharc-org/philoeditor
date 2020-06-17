@@ -1,0 +1,1032 @@
+<!doctype html>
+
+<!--
+ File: index.html
+ Authors: Maria Luce Bottazzo, Primiano Arminio Cristino, Angelo Di Iorio, Giulia Donati, Fabio Vitali
+ Last change on: 17/06/2020
+
+ Copyright (c) 2020 by the authors, DH.ARC + Department of Computer Science, University of Bologna
+
+ Permission to use, copy, modify, and/or distribute this software for any
+ purpose with or without fee is hereby granted, provided that the above
+ copyright notice and this permission notice appear in all copies.
+
+ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+ WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY
+ SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+ WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION
+ OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN
+ CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+-->
+
+<!--[if lt IE 7]>	  <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>		 <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>		 <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="favicon/favicon.ico">
+	<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+
+	<style id="stili"></style>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/bootstrap1.min.css">
+
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	<div class="wrap" id="all">
+
+		<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+<div class="alert alert-danger" role="alert" id="errore" ></div>
+<div class="alert alert-success" role="alert" id="notifica"></div>
+			<div class="container">
+				<div class="navbar-header">
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#" >PhiloEditor 6.0</a>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-left">
+
+						<li>
+							<a href="#" role="button" data-toggle="modal" data-target="#about">Info</a>
+						</li>
+						<li>
+							<a href="#" role="button" data-toggle="modal" data-target="#help">Aiuto</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Statistiche
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#" data-toggle="modal" id="statCap">Su questo documento</a>
+								</li>
+								<li>
+									<a href="#" data-toggle="modal" id="statOp">Su tutta l'opera</a>
+								</li>
+							</ul>
+						</li>
+
+
+					     <li class="dropdown keep-inside-clicks-open operas">
+						        <a href="#" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Opere <span class="caret"></span></a>
+						        <ul class="dropdown-menu">
+							         <li>
+										<a data-toggle="collapse" class="collapse-large unclickable" style="text-align: center; " href="#docs">
+											<!--Opere disponibili-->
+										</a>
+										<div id="docs" class="panel-collapse collapse in">
+											<ul class="nav nav-list" id="list"> </ul>
+										</div>
+									</li>
+						        </ul>
+						   </li>
+
+					      <li class="dropdown keep-inside-clicks-open">
+					        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contributi <span class="caret"></span></a>
+					        <ul class="dropdown-menu">
+								<li>
+									<a data-toggle="collapse" class="collapse-large unclickable" onclick='return false;' style="text-align: center;" href="#docs1">
+										<!--Contributi degli autori-->
+									</a>
+									<div id="docs1" class="panel-collapse collapse in">
+										<ul class="nav nav-list" id="list1"> </ul>
+									</div>
+								</li>
+				        	</ul>
+					      </li>
+
+
+
+						<!--<li>
+							<a href="#" class="btn btn-default" role="button" id="esportaTei">Esporta Tei</a>
+						</li>-->
+					</ul>
+
+<!--
+									<div class="col-sm-3 col-md-3 pull-right">
+										<div class="navbar-form" role="search">
+											<div class="input-group" style="margin-top: 1%;">
+												<input type="search" class="form-control" placeholder="Search" name="srch-term" aria-label="Search" id="srch-term">
+												<div class="input-group-btn">
+													<button class="btn btn-default" data-search="prev" type="submit" id="prevButton"><i class="glyphicon glyphicon-chevron-left" ></i></button>
+													<button class="btn btn-default" data-search="next" type="submit" id="searchButton"><i class="glyphicon glyphicon-chevron-right" ></i></button>
+													<button class="btn btn-default" data-search="clear" type="submit" id="searchButton"><i class="glyphicon-cog
+glyphicon glyphicon-trash" ></i></button>
+												</div>
+											</div>
+										</div>
+									</div>
+-->
+
+												<!--<div class="input-group">
+								<input type="text" class="form-control" placeholder="Search" name="srch-term" aria-label="Search" id="srch-term">
+								<div class="input-group-btn">
+									<button class="btn btn-default" type="submit" id="searchButton"><i class="glyphicon glyphicon-search" ></i></button>
+								</div>
+
+							</div>-->
+
+
+<!--
+					<ul class="nav navbar-nav navbar-left">
+
+						<li>
+							<div class="panel panel-default spaceOver" style="margin-right: 2px;margin-top: 2px;">
+								<div class="panel-heading">
+									<h1 class="panel-title">
+										<a data-toggle="collapse" href="#docs">
+											Opere disponibili
+										</a>
+									</h1>
+								</div>
+								<div id="docs" class="panel-collapse collapse">
+									<ul class="nav nav-list" id="list"> </ul>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="panel panel-default spaceOver "style="margin-top: 2px;">
+								<div class="panel-heading">
+									<h1 class="panel-title">
+										<a data-toggle="collapse" href="#docs1">
+											Contributi
+										</a>
+									</h1>
+								</div>
+								<div id="docs1" class="panel-collapse collapse">
+									<ul class="nav nav-list" id="list1"> </ul>
+								</div>
+							</div>
+						</li>
+					</ul>
+-->
+					<ul class="nav navbar-nav navbar-right" >
+
+						<li class="navbar-form" role="search">
+							<div class="input-group" style="margin-top: 1%;">
+								<input type="search" class="form-control" placeholder="Search" name="srch-term" aria-label="Search" id="srch-term">
+								<div class="input-group-btn">
+									<button class="btn btn-default" data-search="prev" type="submit" id="prevButton"><i class="glyphicon glyphicon-chevron-left" ></i></button>
+									<button class="btn btn-default" data-search="next" type="submit" id="searchButton"><i class="glyphicon glyphicon-chevron-right" ></i></button>
+									<!--<button class="btn btn-default" data-search="clear" type="submit" id="searchButton"><i class="glyphicon-cog
+glyphicon glyphicon-trash" style="display: none;"></i></button>-->
+								</div>
+							</div>
+						</li>
+
+						<li id="loginMenu" >
+							<a href="#" role="button" data-toggle="modal" data-target="#login" >Login...</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" id="logoutMenu" onclick=ctrl() class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+							  aria-expanded="false">
+								<span id="userNameShow">Nessun utente</span>
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu">
+								<li id="save">
+									<a href="#">Salva..</a>
+								</li>
+								<li id="newSave">
+									<a href="#">Salva come nuovo..</a>
+								</li>
+
+								<li data-toggle="modal" id="share">
+									<a href="#">Condividi documento...</a>
+								</li>
+								<li>
+									<a href="#" id="esportaTei">Esporta Tei</a>
+								</li>
+								<li data-toggle="modal" data-target="#account">
+									<a href="#">Account ...</a>
+								</li>
+								<li>
+									<a href="#" id='logoutButton'>Logout...</a>
+								</li>
+							</ul>
+						</li>
+
+
+					</ul>
+				</div>
+				<!--/.nav-collapse -->
+			</div>
+		</div>
+
+		<div class="container-fluid body" >
+
+			<div class="row clearfix">
+				<!--<div class="col-md-3 left">
+
+					<div class="panel panel-default spaceOver">
+						<div class="panel-heading">
+							<h1 class="panel-title">
+								<a data-toggle="collapse" href="#docs">
+									Opere disponibili
+								</a>
+							</h1>
+						</div>
+						<div id="docs" class="panel-collapse collapse in">
+							<ul class="nav nav-list" id="list"> </ul>
+						</div>
+					</div>
+
+
+
+					<div class="panel panel-default spaceOver">
+						<div class="panel-heading">
+							<h1 class="panel-title">
+								<a data-toggle="collapse" href="#docs1">
+									Contributi
+								</a>
+							</h1>
+						</div>
+						<div id="docs1" class="panel-collapse collapse in">
+							<ul class="nav nav-list" id="list1"> </ul>
+						</div>
+					</div>
+
+				</div>-->
+
+				<div class="col-md-12 right" id="left_part" >
+<div class="progress"  hidden="true">
+  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="mybar" style="width: 0%;">
+    <!--<span class="sr-only">0% Complete</span>-->0%
+    <!--<span class="sr-only">0% Complete</span>-->
+  </div>
+</div>
+					<div id="title">
+						<h1 style="text-align: center;"><b>PhiloEditor 6.0</b></h1>
+					</div>
+					<div id="file">
+						<p><h4>
+						Benvenuti in PHILOEDITOR: una piattaforma che permette di leggere i testi che hanno avuto diverse redazioni d’autore, visualizzando le versioni successive e alcune particolari categorie di varianti.
+						I testi attualmente disponibili sono:
+						</h4>
+
+						<!--</h4></p>
+						<p><h3><b>I Promessi Sposi</b></h3><h5  style="display:inline-block;"> di Alessandro Manzoni</h5>, nelle due redazioni del 1827 (Milano, Ferrario) e del 1840 (Milano, Redaelli). Leggi qui in basso i Criteri di edizione.</p>
+						<img src="ps.jpg" alt="ps" height="150" width="90">
+						<p><h3><b>Le avventure di Pinocchio</b></h3><h5 style="display:inline-block;"> di Collodi</h5>, nelle due redazioni del 1883 (“Il Giornale per i bambini”) e del 1890 (Bemporad). Leggi qui in basso i Criteri di edizione.</p>
+						<img src="pino.jpg" alt="pino" height="150" width="90">-->
+
+							 <section class="text-center">
+
+						        <!--Grid row-->
+							        <div class="row mb-4 wow fadeIn">
+
+							          <!--Grid column-->
+									  <div class="col-md-6 mb-4">
+
+									            <!--Card-->
+									            <div class="card">
+
+									            <!--Card content-->
+									              <div class="card-body">
+									                <!--Title-->
+									                <h3 class="card-title"><b>I PROMESSI SPOSI</b></h3>
+									                <!--Text-->
+									                <h4 class="card-text">di <b>Alessandro Manzoni</b>, nelle due redazioni del 1827 (Milano, Ferrario) e del 1840 (Milano, Redaelli)</h4>
+									              </div>
+
+
+									              <!--Card image-->
+									              <div class="view overlay">
+									                <img src="img/promessi_sposi.jpg" class="card-img-top img-responsive myimg"
+									                  alt="">
+									              </div>
+
+
+
+									            </div>
+									            <!--/.Card-->
+
+									          </div>
+									          <!--Grid column-->
+
+									          <!--Grid column-->
+									          <div class="col-md-6 mb-4">
+
+									            <!--Card-->
+									            <div class="card">
+
+									              <div class="card-body">
+									                <!--Title-->
+									                <h3 class="card-title"><b>PINOCCHIO</b></h3>
+									                <!--Text-->
+									                <h4 class="card-text">di <b>Collodi</b>, nelle due redazioni del 1881-1883 (“Giornale per i bambini”) e del 1983 (Ornella Castellani Pollidori).</h4>
+									              </div>
+									              <!--Card image-->
+									                <div class="view overlay">
+									                <img src="img/pinocchio.jpg" class="card-img-top img-responsive myimg"
+									                  alt="">
+									              </div>
+
+									            </div>
+									            <!--/.Card-->
+
+									          </div>
+									          <!--Grid column-->
+
+							        	</div>
+							        	<!--Grid row-->
+
+	     					 </section>
+     					 <p>
+
+					</div>
+
+				</div>
+				<div class="col-md-3 left" id="right_part" hidden="hidden">
+
+					<div class="panel-group" id="accordion" style="margin-top: 4%;">
+					<!--<div class="panel panel-default">
+							<div class="panel-heading">
+								<h1 class="panel-title">
+									<a data-toggle="collapse" href="#buttons">
+										Versioni e Stili
+									</a>
+								</h1>
+							</div>-->
+							<div id="buttons" class="panel-collapse collapse in">
+								<ul class="nav nav-tabs">
+									<li class="active">
+										<a href="#view" data-toggle="tab" id="showView">Vista</a>
+									</li>
+									<li>
+										<a href="#edit" data-toggle="tab" id="showEdit">Modifica</a>
+									</li>
+								</ul>
+
+								<div class="tab-content">
+									<div class="tab-pane active border border-notop" id="view">
+										<div class="btn-group spaceOver">
+											<button type="button" class="viewVersion btn btn-default" id="versione1" data-version="versione 1">Old</button>
+											<button type="button" class="viewVersion btn btn-default" id="versione2" data-version="versione 2">New</button>
+											<button type="button" class="viewVersion btn btn-default" id="viewVert" data-version="vert">Vert.</button>
+											<button type="button" class="viewVersion btn btn-default" id="viewOriz" data-version="oriz">Orizz.</button>
+										</div>
+										<h4>Metodologie correttorie</h4>
+
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" class="viewStyle" data-style='insert'>
+												<span class="insert visibile">
+													<span>Inserimento</span>
+												</span>
+											</label>
+										</div>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox" class="viewStyle" data-style='delete'>
+												<span class="delete visibile">
+													<span>Cancellazione</span>
+												</span>
+											</label>
+										</div>
+										<div id="viewMetodologie">
+										</div>
+										<h4>Categorie correttorie</h4>
+										<div id="viewCategorie">
+										</div>
+									</div>
+									<div class="tab-pane border border-notop" id="edit">
+										<div class="btn-group spaceOver text-center">
+											<button type="button" class="btn btn-default" id="join">Unisci</button>
+											<button type="button" class="btn btn-default" id="split">Separa</button>
+										</div>
+										<h4>Metodologie correttorie</h4>
+										<div class="button">
+											<button class="btn btn-white addMetodologia insert visibile" data-style='insert'>
+												<span>Inserimento</span>
+											</button>
+										</div>
+										<div class="button">
+											<button class="btn btn-white addMetodologia delete visibile" data-style='delete'>
+												<span>Cancellazione</span>
+											</button>
+										</div>
+										<div id="editMetodologie">
+
+										</div>
+										<h4>Categorie correttorie</h4>
+										<div id="editCategorie">
+										</div>
+										<a href='#' onClick='toggleAll()'>Mostra/Nascondi tutti gli stili</a>
+									</div>
+								</div>
+							</div>
+						<!--</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="push"></div>
+	</div>
+	<div class="footer">
+		<div class="container">
+			<p class="muted credit">
+				&copy; 2019 Fabio Vitali, Gioia Donati, Maria Luce Bottazzo, Primiano Arminio Cristino, Alma Mater Università di Bologna &middot;
+			</p>
+		</div>
+	</div>
+
+
+	<!-- Modal -->
+	<div class="modal-dialog-centered">
+	  <div class="modal fade .modal-backdrop in bs-example-modal-lg" id="progress-bar-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+	    <div class="modal-dialog  modal-xl" role="document">
+	      <div class="modal-content ">
+
+	        <div class="modal-body content">
+	          <div class="modal-header">
+	          	<h4 class="modal-title text-center w-100 position-absolute">Caricamento in corso</h4>
+	          </div>
+	          <div class="progress"  >
+	            <div class="progress-bar massive-font" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="mybar" style="width: 0%;">
+	      <!--<span class="sr-only">0% Complete</span>-->   <span id="percent">0%</span>
+	    													<div id="bar"></div>
+	      <!--<span class="sr-only">0% Complete</span>-->
+	            </div>
+	          </div>
+	        </div>
+
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<div class="modal fade" id="about" tabindex="-1" role="dialog" aria-labelledby="About PhiloEditor 6.0" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Informazioni su PhiloEditor 6.0</h4>
+				</div>
+				<div class="modal-body">
+					<p>PhiloEditor v 3.0 </p>
+					<p>© 2019 Fabio Vitali, Gioia Donati, Maria Luce Bottazzo, Primiano Arminio Cristino. All right reserved.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="help" tabindex="-1" role="dialog" aria-labelledby="Help" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Aiuto</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a href="#introExample" data-toggle="tab">Introduzione</a>
+						</li>
+						<li>
+							<a href="#joinExample" data-toggle="tab">Pulsante Unisci</a>
+						</li>
+						<li>
+							<a href="#splitExample" data-toggle="tab">Pulsante Separa</a>
+						</li>
+						<li>
+							<a href="#textExample" data-toggle="tab">Modifica del testo</a>
+						</li>
+					</ul>
+
+					<div class="tab-content">
+						<div class="tab-pane active border border-notop" id="introExample">
+							<h3 align="center">Introduzione</h3>
+							<p>PhiloEditor permette di mostrare e tracciare le modifiche di un testo in due versioni successive. </p>
+
+							<p>I testi disponibili sono elencati nella lista a sinstra. E' possibile sia selezionare un testo già analizzato, sia
+								ricreare una nuova versione di comparazione selezionando la voce "Confronta X e Y". </p>
+
+							<p>Philoeditor ha due modalità:
+								<i>vista</i> e
+								<i>modifica</i>. In modalità
+								<i>vista</i> si può mostrare il documento selezionato in una delle due versioni oppure in modalità combinata, verticale
+								o orizzontale. Inoltre è sempre possibile attivare o disattivare individualmente una colorazione associate al tipo
+								di modifica secondo il modello di modifiche proposto. </p>
+
+							<p>In modalità
+								<i>modifica</i> si possono creare nuove annotazioni, colorando le annotazioni esistenti o operando sulle annotazioni
+								trovate dal motore di diff. Nei tab successivi indicazioni più precise sulle operazioni di editazione.</p>
+
+							<p>Soltanto gli utenti autorizzati possono salvare le annotazioni così realizzate. In alto a destra si trova il menù
+								di accounting.E' possibile nominare un altro utente comproprietario di un documento attraverso
+								<i>Condividi documento</i>. Ci sono due modalità di salvataggio:
+								<i> Salva</i> (che sovrascrive il documento) e
+								<i> Salva come nuovo</i> che crea una nuova copia del file.
+						</div>
+						<div class="tab-pane border border-notop" id="joinExample">
+							<h3 align="center">Pulsante
+								<button type="button" class="btn btn-default">Unisci</button>
+							</h3>
+							<p>In modalità
+								<i>modifica</i>, il pulsante
+								<b>Unisci</b>
+								permette di unire due annotazioni (anche separate da un frammento di testo comune) in un'unica annotazione. Questa operazione
+								è l'inversa di
+								<b>Separa</b> e può essere usata per annullarne gli effetti. </p>
+							<p>Per unire due annotazioni, si selezioni da un punto qualunque della prima annotazione (testo nuovo o vecchio, indifferentemente)
+								fino ad un punto qualunque della seconda annotazione, come segue: </p>
+
+							<p>
+								<img src="img/c1 - unione.png" class="img-responsive" alt="selezione di due annotazioni">
+							</p>
+
+							<p>Dopo aver selezionato il il testo (anche parziale) delle due annotazioni e agito sul pulsante
+								<b>Unisci</b> si ottiene un'unica annotazione che contiene nel testo vecchio il testo vecchio delle due annotazioni
+								ed ogni eventuale testo comune tra le due, e nel testo nuovo il testo nuovo delle due annotazioni ed una seconda
+								copia dell'eventuale testo comune tra le due, come segue:</p>
+
+							<p>
+								<img src="img/c2 - unione.png" class="img-responsive" alt="unione di due annotazioni">
+							</p>
+
+						</div>
+						<div class="tab-pane border border-notop" id="splitExample">
+							<h3 align="center">Pulsante
+								<button type="button" class="btn btn-default" id="split">Separa</button>
+							</h3>
+							<p>In modalità
+								<i>modifica</i>, il pulsante
+								<b>Separa</b>
+								permette di separare in due un'annotazione che contenga modifiche che è utile tenere separate, (eventualmente anche perché
+								caratterizzate da un frammento di testo comune). Questa operazione è l'inversa di
+								<b>Unisci</b> e può essere usata per annullarne gli effetti. </p>
+
+							<h4>Separazione sulla base di un testo condiviso</h4>
+							<p>Nel caso in cui l'annotazione comprenda un frammento di testo condiviso da testo vecchio e nuovo, e univocamente identificabile,
+								selezionando tale testo nella finestra e agendo sul pulsante
+								<b>separa</b>
+								si creeranno due annotazioni con un testo comune condiviso.
+
+								<p>
+									<img src="img/a1 - separa.png" class="img-responsive" alt="separazione con testo comune in un'annotazione">
+								</p>
+
+								<p>Come si vede, il frammento "l'ultima" appartiene sia al testo vecchio che a quello nuovo, e compare come un'unica
+									annotazione quelle che sarebbero in realtà due, con un frammento condiviso in mezzo. Dopo aver selezionato (in azzurro
+									nell'immagine) il frammento condiviso e agito sul pulsante
+									<b>Separa</b> si ottengono due annotazioni separate e il frammento in mezzo alle due:</p>
+
+								<img src="img/a2 - separa.png" class="img-responsive" alt="risultato della separazione con testo comune in un'annotazione">
+
+								<p>Nel caso in cui il testo selezionato compaia più volte nel secondo frammento, la divisione avverrà presso la prima
+									istanza di tale testo.</p>
+
+								<h4>Separazione senza testo condiviso</h4>
+								<p>Nel caso in cui non esista una parola condivisa tra il testo vecchio e nuovo, ma si voglia comunque effetuare una
+									divisione, è necessario indicare il punto di separazione delle due annotazioni sia nel testo vecchio che in quello
+									nuovo. Questo avviene attraverso una selezione (in azzurro nell'immagine) che parta dal punto di separazione nel
+									testo vecchio e arrivi nel punto di separazione del testo nuovo, come segue:
+
+									<p>
+										<img src="img/b1 - separa.png" class="img-responsive" alt="separazione senza testo comune in un'annotazione">
+									</p>
+
+									<p>Come si vede, la selezione va dal nuovo al vecchio testo ed identifica i due punti in cui deve avvenire la separazione.
+										Dopo aver agito sul pulsante
+										<b>Separa</b> si ottengono due annotazioni separate e contigue:</p>
+
+									<img src="img/b2 - separa.png" class="img-responsive" alt="risultato della separazione senza testo comune in un'annotazione">
+						</div>
+						<div class="tab-pane border border-notop" id="textExample">
+							<h3 align="center">Modifica del testo</h3>
+
+							<p>Oltre a modificare il tipo e la colorazione delle annotazioni, è anche possibile modificare il testo sia delle annotazioni
+								sia del testo condiviso. </p>
+							<p>Per farlo, in modalità "modifica", basta effettuare un doppio click sul testo. Il frammento più vicino al doppio click
+								diventerà editabile e la parola su cui è stato fatto click sarà selezionata.
+							</p>
+							<p>Per uscire dalla modalità editazione basterà fre click
+								<i>fuori</i> dal frammento di testo editabile.</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="statistics" tabindex="-1" role="dialog" aria-labelledby="Statistics" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Statistiche sul documento</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a href="#table" data-toggle="tab" id="showTable">Dati numerici</a>
+						</li>
+						<li>
+							<a href="#items" data-toggle="tab" id="showItems">per interventi sul testo</a>
+						</li>
+						<li>
+							<a href="#chars" data-toggle="tab" id="showChars">per caratteri totali</a>
+						</li>
+						<li>
+							<a href="#netchars" data-toggle="tab" id="showNetChars">per varianti</a>
+						</li>
+					</ul>
+
+					<div class="tab-content">
+						<div class="tab-pane active border border-notop" id="table">
+						</div>
+						<div class="tab-pane border border-notop" id="items">
+							<h3 align="center">Per interventi sul testo</h3>
+							<div id="chartItems" style="width: 500px; height: 400px;"> </div>
+						</div>
+						<div class="tab-pane border border-notop" id="chars">
+							<h3 align="center">Per caratteri totali</h3>
+							<div id="chartChars" style="width: 500px; height: 400px;"> </div>
+						</div>
+						<div class="tab-pane border border-notop" id="netchars">
+							<h3 align="center">Per varianti</h3>
+							<div id="chartNetChars" style="width: 500px; height: 400px;"> </div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="statisticsBook" tabindex="-1" role="dialog" aria-labelledby="Statistiche del Libro" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel">Statistiche sull'opera intera</h4>
+				</div>
+				<div class="modal-body">
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a href="#tableBook" data-toggle="tab" id="showTableBook">Dati numerici</a>
+						</li>
+						<li>
+							<a href="#itemsBook" data-toggle="tab" id="showItemsBook">per interventi sul testo</a>
+						</li>
+						<li>
+							<a href="#charsBook" data-toggle="tab" id="showCharsBook">per caratteri totali</a>
+						</li>
+						<li>
+							<a href="#netcharsBook" data-toggle="tab" id="showNetCharsBook">per varianti</a>
+						</li>
+					</ul>
+
+					<div class="tab-content">
+						<div class="tab-pane active border border-notop table-responsive" id="tableBook" style="width:90%">
+							<h3 align="center">Dati numerici</h3>
+							<table class="table" id="tableBook">
+								<thead>
+									<tr id="tableLeg">
+										<th class="col-md-4 col-sm-4">Documento</th>
+										<th class="col-md-1 col-sm-1">&nbsp;</th>
+										<th class="col-md-1 col-sm-1 text-center" id="cat1"></th>
+										<th class="col-md-1 col-sm-1 text-center" id="cat2"></th>
+										<th class="col-md-1 col-sm-1 text-center" id="cat3"></th>
+										<th class="col-md-1 col-sm-1 text-center" id="cat4"></th>
+										<th class="col-md-1 col-sm-1 text-center">Non Modif.</th>
+										<th class="col-md-2 col-sm-2 text-center">Totali</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div>
+						<div class="tab-pane border border-notop" id="itemsBook">
+							<h3 align="center">Per interventi sul testo</h3>
+							<div id="chartItemsBook" style="width: 500px; height: 400px;"> </div>
+						</div>
+						<div class="tab-pane border border-notop" id="charsBook">
+							<h3 align="center">Per caratteri totali</h3>
+							<div id="chartCharsBook" style="width: 500px; height: 400px;"> </div>
+						</div>
+						<div class="tab-pane border border-notop" id="netcharsBook">
+							<h3 align="center">Per varianti</h3>
+							<div id="chartNetCharsBook" style="width: 500px; height: 400px;"> </div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- form tei -->
+	<div class="modal fade" id="metadata" tabindex="-1" role="dialog" aria-labelledby="metadata" aria-hidden="true">
+		<form id="metaForm">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close resetMeta" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h3 class="modal-title">Metadati</h3>
+						<div id="errorMeta"></div>
+					</div>
+					<div class="modal-body">
+						<h4>Informazioni sulla marcatura delle varianti</h4>
+						<hr>
+						<label for="nome">Nome autore dell'intervento :</label>
+						<input id="publFrom" name="nome" class="form-control form-group" required>
+						<label for="desc">Responsabilità dell'autore :</label>
+						<textarea name="desc" id="desc" class="form-control form-group" rows="3" cols="20" placeholder="e.g.:codifica dei capitoli 1,2,3..."
+						  required></textarea>
+						<label for="luogo">Luogo di pubblicazione :</label>
+						<input id="publPlace" name="luogo" class="form-control form-group" required>
+						<label for="licenza">Licenza per il riutilizzo dei dati :</label>
+						<textarea id="publLic" name="licenza" class="form-control form-group" row="3" cols="20" required></textarea>
+						<hr>
+						<h4>Relazione con la fonte</h4>
+						<hr>
+						<label for="codifica">Interventi nel documento digitale :</label>
+						<textarea id="codif" name="codifica" class="form-control form-group" rows="6" cols="20" placeholder="e.g.:marcatura basilare dei soli aspetti fraseologici; informazioni sul layout non preservate..."
+						  required></textarea>
+					</div>
+					<div class="modal-footer">
+
+
+						<button type="button" class="btn resetMeta" data-dismiss="modal">Annulla</button>
+						<button class="btn btn-primary" id="metadataButton" type="submit"> Salva </button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+		<form class="form-signin" id="loginForm">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close resetLogin" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Login</h4>
+						<div id="errorLogin"></div>
+					</div>
+					<div class="modal-body">
+						<label for="inputEmail" class="sr-only">Utente</label>
+						<input name="user" id="user" class="form-control form-group" placeholder="Utente" required autofocus>
+						<label for="pwd" class="sr-only">Password</label>
+						<input type="password" id="pwd" name="pwd" class="form-control form-group" placeholder="Password" required>
+					</div>
+					<div class="modal-footer">
+
+						<button class="btn btn-info resetLogin" type="button" data-toggle="modal" data-target="#signUpForm"> Sign Up </button>
+
+						<button type="button" class="btn resetLogin" data-dismiss="modal">Annulla</button>
+						<button class="btn btn-primary" type="submit"> Login </button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!-- sign Up-->
+	<div class="modal fade" id="signUpForm" tabindex="-1" role="dialog" aria-labelledby="signUpnLabel" aria-hidden="true">
+		<form class="form-signUp " id="formReg">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close resetSignUp" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+						<div id="errorSignUp"></div>
+					</div>
+					<div class="modal-body ">
+						<div>
+							<label for="inputEmail" class="sr-only">Nome</label>
+							<input name="user" id="nome" class="form-control form-group " placeholder="Nome" aria-describedby="nomeStatus" required onfocusout="check(this)">
+						</div>
+						<div>
+							<label for="inputEmail" class="sr-only">Cognome</label>
+							<input name="user" id="cognome" class="form-control form-group" placeholder="Cognome" required onfocusout="check(this)">
+						</div>
+						<div>
+							<label for="inputEmail" class="sr-only">User Name</label>
+							<input name="user" id="userName" class="form-control form-group" placeholder="UserName" required onfocusout="check(this)">
+						</div>
+						<div>
+							<label for="inputEmail" class="sr-only">Scuola</label>
+							<input name="user" id="scuola" class="form-control form-group" placeholder="Scuola di appartenenza" required onfocusout="check(this)">
+						</div>
+						<fieldset class="form-group">
+							<label class="checkbox-inline">
+								<input type="radio" name="gender" value="m">M</label>
+							<label class="checkbox-inline">
+								<input type="radio" name="gender" value="f">F</label>
+						</fieldset>
+						<div>
+							<label for="pwd" class="sr-only">Password</label>
+							<input type="password" id="pwd1" name="pwd" class="form-control form-group" placeholder="Password" required onfocusout="check(this)">
+						</div>
+						<div>
+							<label for="pwd" class="sr-only">Conferma Password</label>
+							<input type="password" id="pwd2" name="pwd" class="form-control form-group" placeholder="Conferma Password" required onfocusout="check(this)">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn resetSignUp" data-dismiss="modal">Annulla</button>
+						<button class="btn btn-primary" id="signUp" type="submit"> Sign Up </button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!-- Cambio password -->
+	<div class="modal fade" id="account" tabindex="-1" role="dialog" aria-labelledby="changePwdLabel" aria-hidden="true">
+		<form class="form-pwd" id="pwdForm">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close resetPwd " data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Cambio Password</h4>
+						<div id="errorPwd"></div>
+					</div>
+					<div class="modal-body ">
+						<div>
+							<label for="pwd" class="sr-only">Password</label>
+							<input type="password" id="pwdOld" name="pwd" class="form-control form-group" placeholder="Password" required onfocusout="check(this)">
+						</div>
+						<div>
+							<label for="pwd" class="sr-only">Nuova Password</label>
+							<input type="password" id="pwdNew1" name="pwd" class="form-control form-group" placeholder="Nuova Password" required onfocusout="check(this)">
+						</div>
+						<div>
+							<label for="pwd" class="sr-only">Conferma Password</label>
+							<input type="password" id="pwdNew2" name="pwd" class="form-control form-group" placeholder="Conferma Password" required onfocusout="check(this)">
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn resetPwd" data-dismiss="modal">Annulla</button>
+						<button class="btn btn-primary" id="conferma" type="submit"> Conferma </button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<!--  condividi  -->
+	<div class="modal fade" id="coowner" tabindex="-1" role="dialog" aria-labelledby="share" aria-hidden="true">
+		<form id="shareForm">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close resetCoowner" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel">Condividi Documento</h4>
+						<div id="errorShare"></div>
+					</div>
+					<div class="modal-body ">
+						<div>
+							<label for="username" class="sr-only">Username</label>
+							<input type="text" id="coownerName" class="form-control formAdd" placeholder="username" required>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn resetCoowner" data-dismiss="modal">Annulla</button>
+						<button class="btn btn-primary" id="coownerBtn" type="submit"> Condividi </button>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<script id="theTable" type="text/template">
+		<h3 align="center">Statistiche complessive</h3>
+		<table class="table table-bordered table-hover" style="width: 500px; height: 400px;">
+			<tr id="tHead">
+				<th>Tipo</th>
+				<th class="text-center">Interventi</th>
+				<th class="text-center">Caratteri coinvolti</th>
+			</tr>
+			<tr class="info">
+				<td>
+					<i>Non modificati</i>
+				</td>
+				<td class="text-center">--</td>
+				<td class="text-center">$unmodified</td>
+			</tr>
+			<tr class="success">
+				<td>
+					<i>
+						<b>Totali</i>
+				</td>
+				<td class="text-center">$totalItems</td>
+				<td class="text-center">$total</td>
+			</tr>
+		</table>
+	</script>
+	<script type="text/template" id="theTableEntry">
+		<tr>
+			<td>$cl</td>
+			<td class="text-center">$catItems</td>
+			<td class="text-center">$catChars</td>
+		</tr>
+	</script>
+	<script id="theTableRow" type="text/template">
+		<tr>
+			<th>$chapter</th>
+			<td id="gHead$index" class="small-text text-right">
+				<i>Elementi
+					<br>Caratteri</i>
+			</td>
+			<td class="text-center">--
+				<br/>$unmodified</td>
+			<td class="text-center">$totalItems
+				<br/>$total</td>
+		</tr>
+	</script>
+	<script type="text/template" id="theTableContent">
+		<td class="text-center">$catItems
+			<br/>$catChars</td>
+	</script>
+	<script src="js/jquery.min.js"></script>
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+	<script>
+		window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+	</script>
+
+	<script src="js/vendor/bootstrap.min.js"></script>
+
+<!--<script src="js/mark-8.6.0.js"></script>-->
+
+	<script type="text/javascript" src="js/jsapi.js">
+	</script>
+	<script src="js/vendor/wikeddiff/cacyclestart.js">
+	</script>
+	<script src="js/vendor/wikeddiff/cacyclediff.js">
+	</script>
+	<script src="js/krypton/md5.js"></script>
+	<script src="js/save.js"></script>
+	<script src="js/saxon/Saxonce.nocache.js"></script>
+	<script src="js/plugins.js"></script>
+	<!--<script src="js/download.js"></script>-->
+		<script src="js/main.js"></script>
+		<script src="js/scrollib.js"></script>
+		<script src="js/vendor/wikeddiff/remarkable.min.js"></script>
+
+		<script src="js/krypton/sha1.js"></script>
+		<script src="js/krypton/sha256.js"></script>
+		<script src="js/krypton/sha3.js"></script>
+
+
+		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<!--
+		<script>
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+		</script>
+-->
+</body>
+
+</html>
