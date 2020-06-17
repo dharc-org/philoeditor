@@ -1,0 +1,59 @@
+{
+	"categories": {
+		"label": "Categorie correttorie",
+			"items": {
+				"abbassamento": {
+					"label": "Abbassamento linguistico",
+					"abbr":"Abb.",
+					"className": "abbassamento",
+					"css": "background-color: #ffff99;"
+				},
+				"fiorentinismi":{
+					"label":"Fiorentinismi d'uso",
+					"abbr":"Fior.",
+					"className":"fiorentinismi",
+					"css":"background-color: #99ccff; "
+				},
+				"innalzamento":{
+					"label":"Innalzamento linguistico",
+					"abbr":"Innalz.",
+					"className":"innalzamento",
+					"css":"background-color: #80ffcc; "
+				},
+				"locuzioni":{
+					"label":"Locuzioni idiomatiche",
+					"abbr":"Loc.",
+					"className":"locuzione",
+					"css":"background-color: #ff944d; "
+				},
+				"toscanismi": {
+					"label": "Toscanismi letterari",
+					"abbr":"Tosc.",
+					"className": "toscanismi",
+					"css": "background-color: #99ffff;"
+				},
+				"variante":{
+					"label":"Varianti grafiche",
+					"abbr":"Var. gr.",
+					"className":"variante",
+					"css":"background-color: #CCFC65; "
+				},
+				"interpunzione":{
+					"label":"Varianti interpuntive",
+					"abbr":"Interp.",
+					"className":"interpunzione",
+					"css":"background-color: #E8D9BF;padding-left: 2px;padding-right: 2px;"
+				}
+			}
+	},
+		"methodologies": {
+			"label": "Metodologie correttorie",
+			"items": {
+				"ordine": {
+					"label": "Ordine delle parole",
+					"className": "ordine",
+					"css": "color: #FF00FF;"
+				}
+			}
+		}
+	}

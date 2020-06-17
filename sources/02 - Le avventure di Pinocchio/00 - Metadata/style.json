@@ -1,0 +1,65 @@
+{
+	"categories": {
+		"label": "Categorie correttorie",
+			"items": {
+				"fiorentinismi": {
+					"label": "Fiorentinismi d'uso",
+					"abbr":"Fior.",
+					"className": "fiorentinismiduso",
+					"css": "background-color: #cc0000;"
+				},
+				"innalzamento espressivo":{
+					"label":"Innalzamento espressivo",
+					"abbr":"Innalz.",
+					"className":"innalzamento",
+					"css":"background-color: #666633;"
+				},
+				"Precisazioni scolastiche":{
+					"label":"Precisazioni scolastiche",
+					"abbr":"Prec.",
+					"className":"precisazioni",
+					"css":"background-color: #ffff00; "
+				},
+				"ridondanza semantica":{
+					"label":"Ridondanza semantica",
+					"abbr":"Ridond.",
+					"className":"ridondanza",
+					"css":"background-color: #009999;padding-left: 2px;padding-right: 2px;"
+				},
+				"ripetizioni":{
+					"label":"Ripetizioni",
+					"abbr":"Ripet.",
+					"className":"ripetizioni",
+					"css":"background-color: #ff9966;padding-left: 2px;padding-right: 2px;"
+				},
+				"toscanismi": {
+					"label": "Toscanismi",
+					"abbr":"Tosc.",
+					"className": "toscanismi",
+					"css": "background-color: #66ffff;"
+				},
+				"varianti grafiche":{
+					"label":"Varianti grafiche",
+					"abbr":"Graf.",
+					"className":"grafiche",
+					"css":"background-color: #00ff00; padding-left: 2px;padding-right: 2px;"
+				},
+				"varianti interpuntive":{
+					"label":"Varianti interpuntive",
+					"abbr":"Interp.",
+					"className":"interpunzione",
+					"css":"background-color: #bfbfbf;padding-left: 2px;padding-right: 2px;"
+				}
+			}
+	},
+		"methodologies": {
+			"label": "Metodologie correttorie",
+			"items": {
+				"ordine": {
+					"label": "Ordine delle parole",
+					"className": "ordine",
+					"css": "color: #FF00FF;"
+				}
+			}
+		}
+}
