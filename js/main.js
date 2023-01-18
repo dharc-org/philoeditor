@@ -805,7 +805,7 @@ function signUp(){
 	formContent.gender=$("[name='gender']:checked").val()
 	formContent.pwd1=$("#pwd1").val()
 	formContent.pwd2=$("#pwd2").val()
-	formContent.scuola=$("#scuola").val()
+	formContent.scuola=$("#scuola").val().replace(/"/g, "")
 
 	if(!(formContent.nome && formContent.cognome && formContent.userName && formContent.gender && formContent.pwd1 && formContent.scuola)){
 		errorForm("Compilare tutti i campi del form.","#errorSignUp")
